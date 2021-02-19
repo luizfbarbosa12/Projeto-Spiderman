@@ -1,65 +1,71 @@
 .container {
-    border: 1px solid red;
     max-width: 1440px;
     margin: 0 auto;
     padding: 36px 16px;
     display: flex;
+    height: 100vh;
     flex-direction: row;
     align-items: center;
     overflow: hidden;
 }
 
 .container-item-1 {
-    max-width: 576px;
-    border: 1px solid green;
+    max-width: 580px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
 }
 
 .container-item-2 {
-    border: 1px solid green;
+    flex-grow: 5;
 }
 
 .spider {
-    max-width: 150%;
+    max-width: 130%;
     transform: translate3d(-170px, 0, 0);
 }
 
+
 .btn {
     display: inline-block;
-    padding:12px 32px;
-    border-radius: 3px;
-    transform: skewX(-10deg);
-    text-transform: uppercase;
     background: linear-gradient(225deg, #EA1D22 0%, #B31317 100%);
+    border-radius: 3px;
+    padding:12px 32px;
+    text-transform: uppercase;
+    transform: skewX(-10deg);
+    transition: .7s ease;
     position: relative;
+    
         &::after {
             content: '';
-            display: block;
-            width: 20%;
-            height: 70%;
-            border-radius: 3px;
             position: absolute;
-            opacity: 0;
+            display: block;
             top: -2px;
             left: -2px;
+            border-radius: 3px;
+            opacity: 0;
+            width: 20%;
+            height: 70%;
+            z-index: -1;
             border-top: 3px solid #fff;
             border-left: 3px solid #fff;
             transition: .7s ease;
+            
         }
 
         &::before {
             content: '';
-            display: block;
-            width: 30%;
-            height: 70%;
-            border-radius: 3px;
             position: absolute;
-            transition: .7s ease;
-            opacity: 0;
+            display: block;
             bottom: -2px;
             right: -2px;
+            border-radius: 3px;
+            opacity: 0;
+            width: 30%;
+            height: 70%;
+            z-index: -1;
+            transition: .7s ease;
             border-bottom: 3px solid #fff;
             border-right: 3px solid #fff;
         }
@@ -69,22 +75,28 @@
             transition: .7s ease;
             &::after {
                 opacity: 1;
+                top: -2px;
+                left: -2px;
             }
             &::before {
                 opacity: 1;
+                bottom: -2px;
+                right: -2px;
             }
         }
 }
 
 .btn-secondary {
     display: inline-block;
-    padding:10px 32px;
-    border-radius: 3px;
-    transform: skewX(-10deg);
-    text-transform: uppercase;
     background: transparent;
+    border-radius: 3px;
+    padding:10px 32px;
+    text-transform: uppercase;
+    transform: skewX(-10deg);
+    transition: .7s ease;
     position: relative;
-    border: 2px solid red;
+    border: 2px solid $red;
+    z-index: 700;
 
     &::after {
         content: '';
@@ -107,3 +119,11 @@
     }
 }
 
+.btn-container {
+    padding: 15px;
+}
+
+.bottom-icons {
+    display: flex;
+    padding-top: 15px;
+}
