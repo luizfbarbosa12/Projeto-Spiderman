@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spider-man: Miles Morales | PS5</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400&display=swap" rel="stylesheet">
+    <script src="./node_modules/@iconfu/svg-inject/dist/svg-inject.min.js"></script>
 </head>
 <body>
     <!-- HEADER -->
     <header>
         <nav class="navbar">
             <div class="nav-menu">
-                <div class="logo"></div>
+                <div class="logo">
+                    <img src="svg/logo-aranha.svg" onload="SVGInject(this)">
+                </div>
                 <ul class="nav-list">
                     <li><a href="" class="nav-link">Home</a></li>
                     <li><a href="" class="nav-link">Story</a></li>
@@ -20,7 +25,12 @@
                     <li><a href="" class="nav-link">#BeYourself</a></li>
                 </ul>
             </div>
-            <div class="nav-social"></div>
+            <div class="nav-social">
+                <img src="svg/icon-facebook.svg" onload="SVGInject(this)">
+                <img src="svg/icon-instagram.svg" onload="SVGInject(this)">
+                <img src="svg/icon-youtube.svg" onload="SVGInject(this)">
+                <img src="svg/icon-twitter.svg" onload="SVGInject(this)">
+            </div>
         </nav>
     </header>
 
@@ -29,12 +39,11 @@
 <section class="container">
     <div class="container-item-1">
         <p>
-
+            <img src="img/spiderman-text.svg" onload="SVGInject(this)">
 
         </p>
         <p>
-TEXTO LOREM IPSUM SOLOR SIT AMET, ...
-
+            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <p>
             <a href="" class="btn">Pre-order now</a>
@@ -42,11 +51,12 @@ TEXTO LOREM IPSUM SOLOR SIT AMET, ...
         </p>
 
         <p>
-
+            <img src="svg/ps.svg" onload="SVGInject(this)">
+            <img src="svg/marvel.svg" onload="SVGInject(this)">
         </p>
     </div>
     <div class="container-item-2">
-        <!-- imagem do spider man -->
+        <img src="img/spidey.svg" class="spider" onload="SVGInject(this)">
     </div>
 </section>
 
